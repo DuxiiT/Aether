@@ -218,7 +218,7 @@ do
 		end
 	end
 
-	local IconList = loadstring(game:HttpGet('https://raw.githubusercontent.com/DuxiiT/Aether/refs/heads/main/Sources/Icons.lua'))()
+	local IconList = loadstring(game:HttpGet('https://raw.githubusercontent.com/DuxiiT/auto-strat/refs/heads/main/Sources/Icons.lua'))()
 	function gl(i)
 		local iconData = IconList.Icons[i]
 		if iconData then
@@ -2948,7 +2948,7 @@ function Library:Window(p)
 						"error", "warn", "tick", "assert", "shared", "loadstring", "tonumber", "tostring", "type",
 						"typeof", "unpack", "print", "Instance", "CFrame", "Vector3", "Vector2", "Color3", "UDim", "UDim2", "Ray", "BrickColor",
 						"OverlapParams", "RaycastParams", "Axes", "Random", "Region3", "Rect", "TweenInfo",
-						"collectgarbage", "not", "utf8", "pcall", "xpcall", "_G", "setmetatable", "getmetatable", "os", "pairs", "ipairs"
+						"collectgarbage", "not", "utf8", "pcall", "xpcall", "getgenv", "setmetatable", "getmetatable", "os", "pairs", "ipairs"
 					},
 					operators = {
 						"#", "+", "-", "*", "%", "/", "^", "=", "~", "=", "<", ">",
@@ -5191,7 +5191,7 @@ function Library:Window(p)
 		CloseUIImage.BorderSizePixel = 0
 		CloseUIImage.Position = UDim2.new(0.5, 0,0.5, 0)
 		CloseUIImage.Size = UDim2.new(0, 50,0, 50)
-		CloseUIImage.Image = "rbxassetid://105059922903197"
+		CloseUIImage.Image = "rbxassetid://100189470230468"
 		CloseUIImage.ImageTransparency = 0
 
 		addToTheme('Text & Icon', CloseUIImage)

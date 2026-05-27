@@ -1293,7 +1293,7 @@ function Library:Window(p)
 	TypeLabel.Size = UDim2.new(1, 0, 0, 12)
 	TypeLabel.Font = Enum.Font.Gotham
 	TypeLabel.TextSize = 12
-	TypeLabel.Text = "Type: " .. ( (type(JD_IS_PREMIUM) ~= 'nil' and JD_IS_PREMIUM) and "Premium" or "Free" )
+	TypeLabel.Text = "Type: " .. ( (type(getgenv().IsPremium) ~= 'nil' and getgenv().IsPremium) and "Premium" or "Free" )
 	TypeLabel.TextColor3 = Color3.fromRGB(200,200,200)
 	TypeLabel.TextXAlignment = Enum.TextXAlignment.Left
 	TypeLabel.TextWrapped = true
@@ -1337,8 +1337,8 @@ function Library:Window(p)
 
 	task.spawn(function()
 		while task.wait(1) do
-			local ok, expires = pcall(function() return JD_EXPIRES_AT end)
-			local ok2, isPremium = pcall(function() return JD_IS_PREMIUM end)
+			local ok, expires = pcall(function() return getgenv().ExpiresAt end)
+			local ok2, isPremium = pcall(function() return getgenv().IsPremium end)
 			local remaining = nil
 			if ok and type(expires) == 'number' then
 				remaining = expires - os.time()
